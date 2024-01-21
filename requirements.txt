@@ -1,0 +1,5 @@
+Django
+djangorestframework
+google-generativeai
+python-decouple
+streamlit
