@@ -1,2 +1,5 @@
 venv/
 .env
+APIs/APIs/__pychache__/
+APIs/text_bot/__pychache__/
+APIs/image_bot/__pychache__/
