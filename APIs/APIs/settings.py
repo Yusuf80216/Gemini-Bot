@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "text_bot.apps.TextBotConfig",
-    "image_bot.apps.ImageBotConfig"
+    "image_bot.apps.ImageBotConfig",
+    "pdf_chat.apps.PdfChatConfig",
 ]
 
 MIDDLEWARE = [
