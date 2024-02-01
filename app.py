@@ -3,6 +3,7 @@ from PIL import Image
 import requests
 import uuid
 from decouple import config
+import io
 
 API_URL = config("API_URL")
 
@@ -38,7 +39,7 @@ def chatbot(session_id):
         st.session_state.messages.append({"role": "assistant", "content": result})
 
 def imagebot(session_id):
-    uploaded_file = st.file_uploader("Please upload an image")
+    uploaded_file = st.file_uploader("Please upload an image", type=["jpg", "jpeg", "png", "webp"])
 
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
@@ -60,6 +61,26 @@ def imagebot(session_id):
             else:
                 st.error("Failed to send the data.")
 
+def pdfchat(session_id):
+    uploaded_pdf = st.file_uploader("Please upload a PDF", type=["pdf"])
+    if uploaded_pdf is not None:
+        pdf_bytes = uploaded_pdf.read()
+        st.success("PDF Uploaded Succesfully!")
+        prompt = st.text_input(label="Ask about uploaded PDF...", key=session_id)
+        if prompt is not None and st.button("Ask"):
+            with st.spinner("Thinking..."):
+                files = {"pdf": (uploaded_pdf.name, pdf_bytes, "application/pdf")}
+                data = {"session_id": session_id, "prompt": prompt}
+                response = requests.post(f"{API_URL}/pdf/", data=data, files=files)
+
+            if response.status_code == 200:
+                result = response.json()
+                result = result['generated_text']
+                st.markdown(result)
+            else:
+                st.error("Failed to send the data.")
+
+
 
 def chat():
     chatbot(st.session_state.session_id)
@@ -67,9 +88,13 @@ def chat():
 def image():
     imagebot(st.session_state.session_id)
 
+def pdf():
+    pdfchat(st.session_state.session_id)
+
 PAGES = {
     "ChatBot": chat,
     "ImageBot": image,
+    "PDFChat": pdf,
 }
 
 selection = st.sidebar.radio("", list(PAGES.keys()))
