@@ -21,6 +21,18 @@ def chatbot(session_id):
             st.markdown(message['content'])
 
     prompt = st.chat_input("Message Gemini...")
+
+    if not prompt:
+        st.markdown(
+        """
+        <h1 style='font-size: 36px;'>
+            👋 Welcome to Google's Gemini Model 🤖
+        </h1>
+        """,
+        unsafe_allow_html=True
+        )
+        st.markdown("Things you can do with this bot:\n\n1. Converse with chatbot\n2. Ask questions on images\n3. Ask questions on PDFs")
+
     if prompt:
         with st.chat_message("user"):
             st.markdown(prompt)
@@ -92,9 +104,9 @@ def pdf():
     pdfchat(st.session_state.session_id)
 
 PAGES = {
-    "ChatBot": chat,
-    "ImageBot": image,
-    "PDFChat": pdf,
+    "Converse with Chatbot": chat,
+    "Image-Bot": image,
+    "Chat with PDF": pdf,
 }
 
 selection = st.sidebar.radio("", list(PAGES.keys()))
