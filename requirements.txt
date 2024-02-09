@@ -2,9 +2,9 @@ Django
 djangorestframework
 google-generativeai
 python-decouple
-streamlit
 langchain
 pdfplumber
 faiss-cpu
 langchain_google_genai
 langchain-community
+pillow
