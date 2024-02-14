@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3ca4b436-9b52-4b52-8dd8-0e0d917df3fd/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/gemini-bot",
+    "appService.deploySubpath": "."
+}
