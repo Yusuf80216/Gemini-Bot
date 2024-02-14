@@ -12,6 +12,7 @@ import pdfplumber
 import shutil
 
 API_KEY = config("GEMINI_API_KEY")
+# API_KEY = os.environ["GEMINI_API_KEY"]
 
 genai.configure(api_key=API_KEY)
 

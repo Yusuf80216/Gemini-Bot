@@ -4,8 +4,18 @@ from rest_framework.decorators import api_view
 import google.generativeai as genai
 from rest_framework.response import Response
 from decouple import config
+from azure.identity import DefaultAzureCredential
+from azure.keyvault.secrets import SecretClient
+import os
+
+# keyVaultName = os.environ["GEMINIKEY"]
+# vault_url = f"https://{keyVaultName}.vault.azure.net"
+# credential = DefaultAzureCredential()
+# client = SecretClient(vault_url=vault_url, credential=credential)
+# api_key = client.get_secret("$GEMINI_API_KEY").value
 
 API_KEY = config("GEMINI_API_KEY")
+# API_KEY = os.environ["GEMINI_API_KEY"]
 
 # Model Initialization
 genai.configure(api_key=API_KEY)

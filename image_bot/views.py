@@ -6,6 +6,7 @@ from decouple import config
 import os
 
 API_KEY = config("GEMINI_API_KEY")
+# API_KEY = os.environ["GEMINI_API_KEY"]
 
 # Model Initialization
 genai.configure(api_key=API_KEY)
