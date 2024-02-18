@@ -13,7 +13,8 @@ https://github.com/Yusuf80216/Gemini-Bot/assets/67997835/d610f770-f1a8-487b-bccb
 
 ## Technologies used:
 1. Python
-2. Django
-3. Azure
-4. LangChain
-5. FAISS (Facebook AI Similarity Search)
+2. Gemini Model (By Google)
+3. Django
+4. Azure
+5. LangChain
+6. FAISS (Facebook AI Similarity Search)
