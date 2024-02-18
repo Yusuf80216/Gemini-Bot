@@ -1,7 +1,7 @@
 # Google's Gemini Bot
 Introducing **Gemini Bot**: powered by **_Google_** and equipped with a robust API built using Django. Seamlessly deployed on Azure Web Services, it brings unparalleled AI capabilities to the forefront, revolutionizing the way we interact with technology.
 
-Features:
+## Features:
 - Custom System Prompts
 - Converse with Chatbot
 - Ask questions on Images
