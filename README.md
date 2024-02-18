@@ -15,3 +15,5 @@ https://github.com/Yusuf80216/Gemini-Bot/assets/67997835/d610f770-f1a8-487b-bccb
 1. Python
 2. Django
 3. Azure
+4. LangChain
+5. FAISS (Facebook AI Similarity Search)
