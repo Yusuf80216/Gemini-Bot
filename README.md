@@ -8,8 +8,16 @@ Introducing **Gemini Bot**: powered by **_Google_** and equipped with a robust A
 - Ask questions on PDFs
 
 #
-## Video Demonstration
-https://github.com/Yusuf80216/Gemini-Bot/assets/67997835/d610f770-f1a8-487b-bccb-88f85d5c0799
+## Video Demonstrations
+
+## 1. Chatbot
+https://github.com/Yusuf80216/Gemini-Bot/assets/67997835/88cbb4bf-fba5-4322-a24a-ca509f347fd7
+
+## 2. Image
+https://github.com/Yusuf80216/Gemini-Bot/assets/67997835/c012c1f3-5962-4cec-b52d-2b0059a29982
+
+## 3. PDF
+https://github.com/Yusuf80216/Gemini-Bot/assets/67997835/5d4f1c6f-cb15-48a3-a7e5-f04570167b04
 
 ## Technologies used:
 1. Python
